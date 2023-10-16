@@ -1,0 +1,92 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: radial-gradient(circle, rgba(0,0,0,0.15), rgba(0,0,0,0.6)), url('your-background-image.jpg') center center fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #d9534f;
+        }
+
+        .contact {
+            font-weight: bold;
+        }
+
+        .timestamp {
+            font-style: italic;
+        }
+
+        /* Style for the buttons */
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for the separator */
+        .separator {
+            display: inline-block;
+            width: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Access Denied</h1>
+        <p>Sorry, you do not have access to the page you are trying to visit.</p>
+        <p class="contact">If you need assistance, please contact us at <a href="mailto:nicholasa@petatech.net">nicholasa@petatech.net</a>.</p>
+        <p class="timestamp">Timestamp: <span id="timestamp"></span></p>
+        <a class="button" href="https://www.google.com" target="_blank">Google</a>
+        <div class="separator"></div>
+        <button class="button" onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        // JavaScript to display and update the timestamp
+        function updateTimestamp() {
+            const timestampElement = document.getElementById('timestamp');
+            const now = new Date();
+            const formattedTimestamp = now.toLocaleString(); // You can customize the format as needed
+            timestampElement.textContent = formattedTimestamp;
+        }
+
+        // JavaScript function to go back to the original page
+        function goBack() {
+            window.history.back();
+        }
+
+        // Initial call to display the timestamp
+        updateTimestamp();
+    </script>
+
+
+</body></html>
